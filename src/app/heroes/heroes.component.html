@@ -7,24 +7,9 @@
 
 <!-- <pre>{{ hero | json }}</pre> -->
 <hr />
-
-<div>
-    <div class="field">
-        <label for="human-name">Human name: </label>
-        <input id="human-name" [(ngModel)]="hero.humanName" placeholder="name human hero">
-    </div>
-    <div class="field">
-        <label for="real=name">Real name: </label>
-        <input id="real-name" [(ngModel)]="hero.realName" placeholder="name real hero">
-    </div>
-    <div class="field">
-        <label for="alterego">Alterego: </label>
-        <input id="alterego" [(ngModel)]="hero.alterego" placeholder="alterego">
-    </div>
-</div>
-
+aqui estaba el formulario
 <!-- <pre>{{ heroes | json }}</pre> -->
-
+<hr>
 <ng-container *ngIf="heroes.length > 0; else nonHeroes">
     <h2>Lista de Superheroes</h2>
     <ul>
@@ -36,6 +21,9 @@
     <p>No hay heroes registrados</p>
 </ng-template>
 
+<hr>
+<!-- [dataHero Componente Hijo]="hero Componente Padre" -->
+<app-hero-detail [dataHero]="hero"></app-hero-detail>
 
 
 
